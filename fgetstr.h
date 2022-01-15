@@ -15,7 +15,7 @@ char *fgetstr(char *c,int sizes,char *s,FILE * f1){
 		ccc=strstr(c,s);
 		if (ccc!=NULL){
 			ccc[0+strlen(s)]=0;
-			ipos=ipos+strlen(c)+strlen(s)-1;
+			ipos=ipos+strlen(c);
 			fseek(f1,ipos,SEEK_SET);
 		}
 		
