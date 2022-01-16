@@ -11,7 +11,7 @@ char *fgetstr(char *c,int sizes,char *s,FILE * f1){
 		ipos=ftell(f1);
 		poss=fread(c,sizes-2,1,f1);
 		c[sizes-1]=0;
-		//c[poss+1]=0;
+		if (poss >4)c[poss+1]=0;
 		ccc=strstr(c,s);
 		if (ccc!=NULL){
 			ccc[0+strlen(s)]=0;
